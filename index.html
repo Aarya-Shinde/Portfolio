@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev's Creative Portfolio</title>
+  <title>Dev's Personal Brand</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
     .dark-mode {
       background-color: #1a1a1a;
@@ -20,19 +21,20 @@
 </head>
 <body class="font-sans transition-all duration-500">
   <nav class="p-4 flex justify-between items-center bg-white dark-mode:bg-gray-900 shadow-md">
-    <h1 class="text-xl font-bold">Dev's Portfolio</h1>
+    <h1 class="text-xl font-bold">Dev's Brand</h1>
     <button id="toggleTheme" class="px-4 py-2 bg-blue-600 text-white rounded">Toggle Theme</button>
   </nav>
 
   <header class="text-center py-20 bg-gradient-to-br from-blue-200 to-purple-300 dark-mode:from-gray-800 dark-mode:to-black">
     <h2 class="text-4xl md:text-6xl font-bold">Hi, I'm Dev 👋</h2>
     <p class="mt-4 text-xl">A Developer, Writer, and Digital Artist</p>
+    <!-- Spline Embed -->
+    <iframe src="https://my.spline.design/your-3d-scene-link-here" frameborder="0" width="100%" height="400"></iframe>
   </header>
 
   <section class="p-10 max-w-6xl mx-auto">
     <h3 class="text-3xl font-semibold mb-4">🔧 Projects</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Example Project Card -->
       <div class="p-6 rounded-xl glass shadow-md hover:scale-105 transition-all">
         <h4 class="text-xl font-bold mb-2">USA³ - Unified System</h4>
         <p class="text-sm mb-2">A content collaboration platform for writers and readers.</p>
@@ -42,9 +44,38 @@
   </section>
 
   <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">🎨 Featured Animation</h3>
+    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_kyu7xb1v.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></lottie-player>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto">
     <h3 class="text-3xl font-semibold mb-4">🧠 About Me</h3>
     <p>I merge code, creativity, and storytelling. With projects in web dev, AI writing tools, and art platforms—my portfolio reflects fusion thinking.</p>
   </section>
+
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">📝 Blog</h3>
+    <ul class="space-y-2">
+      <li><a href="#" class="text-blue-600 underline">• Building a Smart Hospital Management System</a></li>
+      <li><a href="#" class="text-blue-600 underline">• How I Blend Writing and Web Dev</a></li>
+      <li><a href="#" class="text-blue-600 underline">• Top Tools for Solo Creators in 2025</a></li>
+    </ul>
+  </section>
+
+  <section class="p-10 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">🧰 Tech Stack</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">HTML5</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">CSS / Tailwind</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">JavaScript / GSAP</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">Python / Flask</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">MySQL / SQLite</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">PHP</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">Lottie / Spline</div>
+      <div class="bg-white dark-mode:bg-gray-800 p-4 rounded shadow">Git / GitHub</div>
+    </div>
+  </section>
+  
 
   <section class="p-10 max-w-4xl mx-auto">
     <h3 class="text-3xl font-semibold mb-4">📄 Resume & Links</h3>
@@ -56,16 +87,52 @@
     </ul>
   </section>
 
+  <!-- Art and Write section -->
+
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">🎨 Digital Art</h3>
+    <p class="mb-4">I experiment with stylized illustrations, character concepts, and generative art.</p>
+    <a href="https://www.behance.net/dev" class="text-blue-600 underline">View on Behance</a>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">✍️ Writing</h3>
+    <p class="mb-4">I write fiction, technical blogs, and project guides.</p>
+    <ul class="list-disc pl-6">
+      <li><a href="https://medium.com/@dev/my-creative-process" class="text-blue-600 underline">My Creative Process</a></li>
+      <li><a href="https://medium.com/@dev/usa3-explained" class="text-blue-600 underline">USA³ Explained</a></li>
+    </ul>
+  </section>
+  
+  
+
+  
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">📬 Contact Me</h3>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded" />
+      <input type="email" name="_replyto" placeholder="Your Email" required class="w-full p-2 border rounded" />
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-2 border rounded"></textarea>
+      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded">Send</button>
+    </form>
+  </section>
+  
+
   <footer class="text-center p-6 bg-gray-100 dark-mode:bg-gray-900">
-    <p>&copy; 2025 Dev. Made with ❤️ using Tailwind, GSAP, and creativity.</p>
+    <p class="mb-2">&copy; 2025 Dev. Built with ❤️</p>
+    <div class="flex justify-center space-x-4 text-xl">
+      <a href="https://github.com/dev" target="_blank">🐱 GitHub</a>
+      <a href="https://linkedin.com/in/dev" target="_blank">💼 LinkedIn</a>
+      <a href="https://twitter.com/dev" target="_blank">🐦 Twitter</a>
+      <a href="mailto:dev@email.com">📧 Email</a>
+    </div>
   </footer>
+  
 
   <script>
     document.getElementById('toggleTheme').addEventListener('click', () => {
       document.documentElement.classList.toggle('dark-mode');
     });
-
-    // Simple GSAP animation
     gsap.from("header h2", { duration: 1, y: -50, opacity: 0 });
     gsap.from("header p", { duration: 1, delay: 0.5, y: -30, opacity: 0 });
   </script>
