@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarya Shinde</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="script.js"></script>
+    <!-- Linking Fonts I like -->
+
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet"> <!---/************font-family: 'Bruno Ace SC', cursive;----->
+
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Quicksand:wght@600&display=swap" rel="stylesheet"><!-- NOTE: font-family: 'Quicksand', sans-serif; -->
+
+
+    <!-- Linking for Icons and Accounts Icon -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="indexstyle.css">
+    <!-- <link rel="stylesheet" href="sectionstyle.css"> -->
+    <link rel="stylesheet" href="starsbg.css">
+</head>
+<body>
+
+<!-- Navigation bar ---------------------->
+<div class="navbar">
+    <div class="navbar-section">
+        <!-- Navigation Dropdown -->
+        <div class="dropdown">
+            <span class="nav-link">Navigation</span>
+            <div class="dropdown-content">
+                <a href="#landing">Landing Page</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+        <!-- Social --Dropdown -->
+        <div class="dropdown">
+            <span class="nav-link">Social</span>
+            <div class="dropdown-content">
+                <a href="https://github.com/Aarya-Shinde" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/aarya-shinde-2681a6232/" target="_blank">LinkedIn</a>
+                <a href="mailto:aaryashinde2020@gmail.com">Gmail</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-icon">
+        <button>🌙</button>
+    </div>
+</div>
+
+<!-- The container with my name and profession and buttons -->
+    <main>
+        <div class="mainContainer">
+            <div class="box">
+                <h1>Aarya Shinde</h1>
+                
+                <p class="profession">Front End-Web Developer</p>
+                <div class="buttons">
+                    <button onclick="downloadCV()" >Download CV</button>
+                    <button onclick="scrollToContact()">Contact Me</button>
+                </div>
+            </div>
+        </div>
+     </main>
+
+
+<!-- the stars background -->
+     <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+        </div>
+    </section>
+
+
+
+    <!-- blocks that contain more information ----------------------------->
+
+
+<!-- Experience Section -->
+
+<section id="experience">
+    <h2 class="terminal-text">Experience</h2>
+
+    <div class="glitch-effect">
+        <div class="glitch-line" style="left: 5%; animation-delay: 0.1s;"></div>
+        <div class="glitch-line" style="left: 15%; animation-delay: 0.3s;"></div>
+        <div class="glitch-line" style="left: 30%; animation-delay: 0.5s;"></div>
+        <div class="glitch-line" style="left: 50%; animation-delay: 0.7s;"></div>
+        <div class="glitch-line" style="left: 65%; animation-delay: 0.9s;"></div>
+        <div class="glitch-line" style="left: 80%; animation-delay: 1.1s;"></div>
+        <div class="glitch-line" style="left: 95%; animation-delay: 1.3s;"></div>
+    </div>
+
+    <div class="experience-item" style="border-color: #000a25;">
+        <h3 class="terminal-text">Prodigy Infotech</h3>
+        <p class="terminal-text">Web Development Intern / Jan 2024 – Feb 2024</p>
+        <ul>
+            <li class="terminal-text">Received a Letter of Recommendation for outstanding performance.</li>
+            <li class="terminal-text">Built and maintained responsive web interfaces using HTML, CSS, and JavaScript.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item" style="border-color: #00e1ff;">
+        <h3 class="terminal-text">Data Science Intern</h3>
+        <p class="terminal-text">TheWebsiteMakers / Dec 2023 – Jan 2024</p>
+        <ul>
+            <li class="terminal-text">Conducted data analysis on large datasets, improving forecasting accuracy by 36%.</li>
+            <li class="terminal-text">Developed automated data pipelines using Python and SQL, boosting efficiency by 30%.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item" style="border-color: #000a25;">
+        <h3 class="terminal-text">Ekeeda Private Ltd</h3>
+        <p class="terminal-text">Project Intern / Feb - July 2022</p>
+        <ul>
+            <li class="terminal-text">Led a team of 11 in marketing strategies, increasing engagement by 15%.</li>
+            <li class="terminal-text">Negotiated partnerships, reducing course production costs by 20%.</li>
+            <li class="terminal-text">Boosted platform user base by achieving a 20-30% closing rate on 100+ daily outreach efforts.</li>
+            <li class="terminal-text">Designed go-to-market strategies, improving campaign conversions by 15%.</li>
+            <li class="terminal-text">Analyzed cost-benefit scenarios, leading to a 10% reduction in operational costs.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="education" class="education-section">
+    <h2 class="terminal-text">Education</h2>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front terminal-text">B.E. in AI & Data Science</div>
+                <div class="card-back terminal-text">Savitribai Phule University (2025)</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front terminal-text">Diploma in IT</div>
+                <div class="card-back terminal-text">Govt Polytechnic Mumbai</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <div class="container">
+        <h2 class="terminal-text">My Skills</h2>
+        <div class="skills">
+            <div class="skill-card html">
+                <h3 class="terminal-text">Python</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="skill-card css">
+                <h3 class="terminal-text">Java</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="skill-card js">
+                <h3 class="terminal-text">JavaScript</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="skill-card react">
+                <h3 class="terminal-text">SQL</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="skill-card node">
+                <h3 class="terminal-text">CSS & HTML</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="skill-card python">
+                <h3 class="terminal-text">Python</h3>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  gsap.to(".skill-card", {
+    y: -10,
+    duration: 2,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+    stagger: 0.2
+  });
+</script>
+
+<style>
+.terminal-text {
+    font-family: 'Courier New', monospace;
+    color: #00ffcc;
+    text-shadow: 0px 0px 8px rgba(0, 255, 204, 0.8);
+}
+</style>
+
+
+
+<!-- Project section ----------------- -->
+
+<section id="projects" class="terminal-section">
+    <h2 class="terminal-title">$ My Projects</h2>
+    <div class="terminal-window">
+        <div class="terminal-content">
+            <div class="project" onclick="toggleDetails(this)">
+                <span class="cursor">>_</span> <span class="typed-text">Unified System for Authors & Audience</span>
+                <div class="project-details">
+                    Built a role-based access system where every user is a reader by default, with an option to become a writer, reducing
+                    onboarding friction by 30%.<br>
+                    Implemented a dynamic content recommendation engine, increasing personalized content visibility by 35% and
+                    improving user retention.
+                </div>
+            </div>
+            <div class="project" onclick="toggleDetails(this)">
+                <span class="cursor">>_</span> <span class="typed-text">Stack Overflow Clone</span>
+                <div class="project-details">Developed and launched a Q&A platform for community-driven knowledge sharing, increasing user engagement by
+                    35% through intuitive UI/UX improvements.<br>
+                    Built a secure user authentication system, ensuring seamless sign-ups and logins, reducing login errors by 20%
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDetails(element) {
+        element.classList.toggle("active");
+    }
+    </script>
+
+
+<section id="contact" class="terminal-section">
+    <h2 class="terminal-title">$ Contact Me</h2>
+    <div class="terminal-window">
+        <div class="terminal-content">
+            <p><span class="cursor">>_</span> <span class="typed-text">Email:</span> 
+                <a href="mailto:aaryashinde2020@gmail.com" class="terminal-link">aaryashinde2020@gmail.com</a>
+            </p>
+            <p><span class="cursor">>_</span> <span class="typed-text">LinkedIn:</span> 
+                <a href="https://www.linkedin.com/in/aarya-shinde-2681a6232/" class="terminal-link" target="_blank">https://www.linkedin.com/in/aarya-shinde-2681a6232/</a>
+            </p>
+            <p><span class="cursor">>_</span> <span class="typed-text">GitHub:</span> 
+                <a href="https://github.com/Aarya-Shinde" class="terminal-link" target="_blank">https://github.com/Aarya-Shinde</a>
+            </p>
+            
+            <!-- Contact Form -->
+            <form class="terminal-form" action="https://formspree.io/f/yourformid" method="POST">
+                <label for="name"><span class="cursor">>_</span> <span class="typed-text">Name:</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email"><span class="cursor">>_</span> <span class="typed-text">Email:</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message"><span class="cursor">>_</span> <span class="typed-text">Message:</span></label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="terminal-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Icons for facebook gmail and insta -->
+<footer>
+   
+    <p>&copy; 2025 Aarya Shinde. All Rights Reserved.</p>
+    <div class="social-icons">
+        <div class="social-icon">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+
+        <div class="social-icon">
+            <a href="https://mail.google.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <div class="social-icon">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- /* Cusor  for that glowly trail  */ -->
+<div class="cursor-trail"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("mousemove", (e) => {
+            const particle = document.createElement("span");
+            particle.classList.add("particle");
+            document.body.appendChild(particle);
+    
+            const size = Math.random() * 5 + 5; // Random size (5px - 10px)
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${e.clientX}px`;
+            particle.style.top = `${e.clientY}px`;
+    
+            setTimeout(() => {
+                particle.remove(); // Remove after animation
+            }, 500);
+        });
+    });
+    </script>
+    
+    
+
+</body>
+</html>

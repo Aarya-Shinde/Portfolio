@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev's Creative Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <style>
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="font-sans transition-all duration-500">
+  <nav class="p-4 flex justify-between items-center bg-white dark-mode:bg-gray-900 shadow-md">
+    <h1 class="text-xl font-bold">Dev's Portfolio</h1>
+    <button id="toggleTheme" class="px-4 py-2 bg-blue-600 text-white rounded">Toggle Theme</button>
+  </nav>
+
+  <header class="text-center py-20 bg-gradient-to-br from-blue-200 to-purple-300 dark-mode:from-gray-800 dark-mode:to-black">
+    <h2 class="text-4xl md:text-6xl font-bold">Hi, I'm Dev 👋</h2>
+    <p class="mt-4 text-xl">A Developer, Writer, and Digital Artist</p>
+  </header>
+
+  <section class="p-10 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">🔧 Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Example Project Card -->
+      <div class="p-6 rounded-xl glass shadow-md hover:scale-105 transition-all">
+        <h4 class="text-xl font-bold mb-2">USA³ - Unified System</h4>
+        <p class="text-sm mb-2">A content collaboration platform for writers and readers.</p>
+        <a href="#" class="text-blue-600 underline">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">🧠 About Me</h3>
+    <p>I merge code, creativity, and storytelling. With projects in web dev, AI writing tools, and art platforms—my portfolio reflects fusion thinking.</p>
+  </section>
+
+  <section class="p-10 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">📄 Resume & Links</h3>
+    <ul class="list-disc pl-6">
+      <li><a href="resume.pdf" target="_blank" class="text-blue-600 underline">Download Resume</a></li>
+      <li><a href="https://github.com/dev" class="text-blue-600 underline">GitHub</a></li>
+      <li><a href="https://behance.net/dev" class="text-blue-600 underline">Behance</a></li>
+      <li><a href="https://medium.com/@dev" class="text-blue-600 underline">Medium Blog</a></li>
+    </ul>
+  </section>
+
+  <footer class="text-center p-6 bg-gray-100 dark-mode:bg-gray-900">
+    <p>&copy; 2025 Dev. Made with ❤️ using Tailwind, GSAP, and creativity.</p>
+  </footer>
+
+  <script>
+    document.getElementById('toggleTheme').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+    });
+
+    // Simple GSAP animation
+    gsap.from("header h2", { duration: 1, y: -50, opacity: 0 });
+    gsap.from("header p", { duration: 1, delay: 0.5, y: -30, opacity: 0 });
+  </script>
+</body>
+</html>
