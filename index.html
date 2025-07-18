@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" data-theme="tech">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-  <div class="ocean-canvas"></div>
   <header>
     <nav>
       <div class="logo">Aarya Shinde</div>
@@ -21,41 +20,107 @@
         <li><a href="blog/index.html">Blog</a></li>
         <li><a href="art/index.html">Art</a></li>
         <li><a href="writing/index.html">Writing</a></li>
-        <li><button id="modeToggle" class="btn">Toggle Mode</button></li>
+        <li>
+          <button id="modeToggle" class="btn" aria-label="Toggle theme">
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#333" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"/>
+              <g stroke="#333" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </g>
+            </svg>
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#333" viewBox="0 0 24 24" style="display:none">
+              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+            </svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="section">
-      <h2 id="heroTitle">Creative Technologist</h2>
-      <p id="heroSubtitle">Crafting software and stories</p>
+      <h2 id="heroTitle">Python Developer</h2>
+      <p id="heroSubtitle">Creating what you can imagine is the first step.</p>
       <div style="margin-top: 1.5rem">
         <lottie-player id="lottieAnim" src="/assets/tech-animation.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
       </div>
     </section>
 
     <section class="section">
-      <h2>🔧 Projects</h2>
+      <h2>Work Experience</h2>
+      <div class="timeline-container">
+        <div id="timeline" class="timeline-container"></div>
+        <div class="timeline-line"></div>
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <h2>Training & Certifications</h2>
+      <div class="training timeline"></div>
+    </section>
+
+    <!-- <section class="section">
+      <h2>Projects</h2>
       <div class="project">
         <h3>USA³ - Unified System</h3>
         <p>A content collaboration platform for writers and readers.</p>
         <a href="#" class="btn">View Project</a>
       </div>
+    </section> -->
+
+
+    <section class="section projects-section">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>USA³ – Unified System</h3>
+          <p>Academic project integrating writer-reader collaboration, story publishing, and review features.</p>
+          <a href="#" class="btn">Explore USA³</a>
+        </div>
+        <div class="project-card">
+          <h3>Smart Hospital System</h3>
+          <p>Role-based web app with patient/doctor dashboards, medicine assignments & treatment plans.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Reader’s Diary</h3>
+          <p>Interactive diary system with drag stickers, page flipping, quotes & mood-based theming.</p>
+          <a href="#" class="btn">See Diary</a>
+        </div>
+        <div class="project-card">
+          <h3>Web Dev Internship</h3>
+          <p>Designed interactive UI, created responsive layouts, and optimized site performance at Prodigy InfoTech.</p>
+          <a href="#" class="btn">Intern Work</a>
+        </div>
+        <div class="project-card">
+          <h3>Data Science Internship</h3>
+          <p>Worked on data visualization, basic ML models, and Python automation scripts at TheWebsiteMakers.</p>
+          <a href="#" class="btn">Details</a>
+        </div>
+      </div>
     </section>
+    
 
     <section class="section">
-      <h2>🎨 Featured Animation</h2>
+      <h2>Featured Animation</h2>
       <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_kyu7xb1v.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></lottie-player>
     </section>
 
     <section class="section">
-      <h2>🧠 About Me</h2>
+      <h2> About Me</h2>
       <p>I merge code, creativity, and storytelling. With projects in web dev, AI writing tools, and art platforms—my portfolio reflects fusion thinking.</p>
     </section>
 
     <section class="section">
-      <h2>📝 Blog</h2>
+      <h2> Blog</h2>
       <select id="postSelector" class="btn">
         <option value="posts/blog-1.md">Building a Smart Hospital System</option>
         <option value="posts/blog-2.md">How I Blend Writing and Web Dev</option>
@@ -65,7 +130,7 @@
     </section>
 
     <section class="section">
-      <h2>🧰 Tech Stack</h2>
+      <h2> Tech Stack</h2>
       <div class="grid">
         <span>HTML5</span>
         <span>CSS / Tailwind</span>
@@ -85,20 +150,6 @@
         <li><a href="https://github.com/dev">GitHub</a></li>
         <li><a href="https://behance.net/dev">Behance</a></li>
         <li><a href="https://medium.com/@dev">Medium Blog</a></li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>🎨 Digital Art</h2>
-      <p>I experiment with stylized illustrations, character concepts, and generative art.</p>
-      <a href="https://www.behance.net/dev" class="btn">View on Behance</a>
-    </section>
-
-    <section class="section">
-      <h2>✍️ Writing</h2>
-      <ul>
-        <li><a href="https://medium.com/@dev/my-creative-process">My Creative Process</a></li>
-        <li><a href="https://medium.com/@dev/usa3-explained">USA³ Explained</a></li>
       </ul>
     </section>
 
@@ -123,37 +174,10 @@
     </div>
   </footer>
 
-  <script>
-    const modeToggle = document.getElementById("modeToggle");
-    const title = document.getElementById("heroTitle");
-    const subtitle = document.getElementById("heroSubtitle");
-    const lottieAnim = document.getElementById("lottieAnim");
+  <script src="assets/scripts/toggleMode.js"></script>
+  <script src="assets/scripts/data.js"></script>
+  <script src="assets/scripts/dynamicExperience.js"></script>
+  <script src="assets/scripts/main.js"></script>
 
-    const setMode = (mode) => {
-      document.body.setAttribute("data-theme", mode);
-      localStorage.setItem("theme", mode);
-      if (mode === "creative") {
-        title.textContent = "Writer • Artist • Creator";
-        subtitle.textContent = "Exploring beauty in code and canvas";
-        lottieAnim.load("/assets/creative-animation.json");
-        document.body.style.fontFamily = "'Playfair Display', serif";
-      } else {
-        title.textContent = "Creative Technologist";
-        subtitle.textContent = "Crafting software and stories";
-        lottieAnim.load("/assets/tech-animation.json");
-        document.body.style.fontFamily = "'Inter', sans-serif";
-      }
-    };
-
-    modeToggle.addEventListener("click", () => {
-      const newMode = document.body.getAttribute("data-theme") === "tech" ? "creative" : "tech";
-      setMode(newMode);
-    });
-
-    window.onload = () => {
-      const saved = localStorage.getItem("theme") || "tech";
-      setMode(saved);
-    };
-  </script>
 </body>
 </html>
