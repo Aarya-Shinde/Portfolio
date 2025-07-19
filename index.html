@@ -6,13 +6,35 @@
   <title>Aarya Shinde</title>
 
   <link rel="stylesheet" href="style.css" />
+  <!-- Fav font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  
+  <!-- Cards Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
 </head>
 
 <body>
+
+  <audio id="hover-sound" src="sounds/card-flip.mp3" preload="auto"></audio>
+
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+    const sound = document.getElementById('hover-sound');
+  
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  </script>
+  
+
   <header>
     <nav>
       <div class="logo">Aarya Shinde</div>
@@ -67,47 +89,106 @@
       <div class="training timeline"></div>
     </section>
 
-    <!-- <section class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>USA³ - Unified System</h3>
-        <p>A content collaboration platform for writers and readers.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-    </section> -->
 
+        <!-- Project Section with Unique Deck Animation -->
+      
+<h2>Projects</h2>
+      <section class="project-timeline">
+        <div class="project-line"></div> 
+        <div class="project-cards">
 
-    <section class="section projects-section">
-      <h2>Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <h3>USA³ – Unified System</h3>
-          <p>Academic project integrating writer-reader collaboration, story publishing, and review features.</p>
-          <a href="#" class="btn">Explore USA³</a>
+          <div class="project-card">   
+            <div class="icon-box">
+              <div class="icon">&#x2764;</div>
+              <div class="title">BookSync</div>
+            </div>
+            <div class="tooltip">
+              <p>A full-stack reading tracker with Goodreads scraping, diary features, and theme support.</p>
+            </div>
+          </div>
+      
+          <div class="project-card">
+
+            <div class="icon-box">
+              <div class="icon">&#x2660;</div>
+              <div class="title">HospitalHub</div>
+            </div>
+            <div class="tooltip">
+              <p>Smart hospital system built in Java & MySQL with login, treatment plans, and medicine tracking.</p>
+            </div>
+          </div>
+      
+          <div class="project-card">
+
+            <div class="icon-box">
+              <div class="icon">&#x2666;</div>
+              <div class="title">USA 3</div>
+            </div>
+            <div class="tooltip">
+              <p>Final-year research project bridging authors and readers with modular feedback and smart analytics.</p>
+            </div>
+          </div>
+      
+          <div class="project-card">
+
+            <div class="icon-box">
+              <div class="icon">&#x2663;</div>
+              <div class="title">Writer's Deck</div>
+            </div>
+            <div class="tooltip">
+              <p>Interactive writing dashboard with chapter management, inspiration feed, and story templates.</p>
+            </div>
+          </div>
+
+          <div class="project-card">   
+            <div class="icon-box">
+              <div class="icon">&#x2764;</div>
+              <div class="title">BookSync</div>
+            </div>
+            <div class="tooltip">
+              <p>A full-stack reading tracker with Goodreads scraping, diary features, and theme support.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+
+            <div class="icon-box">
+              <div class="icon">&#x2660;</div>
+              <div class="title">HospitalHub</div>
+            </div>
+            <div class="tooltip">
+              <p>Smart hospital system built in Java & MySQL with login, treatment plans, and medicine tracking.</p>
+            </div>
+          </div>
+      
         </div>
-        <div class="project-card">
-          <h3>Smart Hospital System</h3>
-          <p>Role-based web app with patient/doctor dashboards, medicine assignments & treatment plans.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Reader’s Diary</h3>
-          <p>Interactive diary system with drag stickers, page flipping, quotes & mood-based theming.</p>
-          <a href="#" class="btn">See Diary</a>
-        </div>
-        <div class="project-card">
-          <h3>Web Dev Internship</h3>
-          <p>Designed interactive UI, created responsive layouts, and optimized site performance at Prodigy InfoTech.</p>
-          <a href="#" class="btn">Intern Work</a>
-        </div>
-        <div class="project-card">
-          <h3>Data Science Internship</h3>
-          <p>Worked on data visualization, basic ML models, and Python automation scripts at TheWebsiteMakers.</p>
-          <a href="#" class="btn">Details</a>
-        </div>
-      </div>
-    </section>
-    
+      </section>
+      
+
+        
+
+      <script>
+        const scrollContainer = document.querySelector('.project-cards');
+        let direction = 1;
+      
+        function autoScroll() {
+          if (!scrollContainer) return;
+      
+          const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      
+          scrollContainer.scrollLeft += 1.5 * direction;
+      
+          if (scrollContainer.scrollLeft >= maxScroll || scrollContainer.scrollLeft <= 0) {
+            direction *= -1; // reverse scroll direction
+          }
+      
+          requestAnimationFrame(autoScroll);
+        }
+      
+        requestAnimationFrame(autoScroll);
+      </script>
+      
+      
 
     <section class="section">
       <h2>Featured Animation</h2>
