@@ -205,4 +205,19 @@ body {
   .brush-box .button:hover {
     background: #d4af37;
   }
+/* Thumbnail inside snippet */
+.snippet {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.snippet .thumb {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e6d8c9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
   
