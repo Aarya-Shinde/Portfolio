@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Aarya Shinde</title>
+  <link rel="stylesheet" href="blog.css">
+  <script src="../assets/scripts/toggleMode.js" defer></script>
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <nav class="navbar">
+    <div class="logo">Aarya Shinde</div>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    
+    <ul>
+      <li><a href="../blog/index.html" class="active">Blog</a></li>
+      <li><a href="../art/index.html">Art</a></li>
+      <li><a href="../writing/index.html">Writing</a></li>
+      <li>
+        <button id="modeToggle" class="toggle-btn" aria-label="Toggle theme">
+          <!-- Sun Icon -->
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none">
+            <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <header class="blog-header">
+      <h1>Aarya's Blog</h1>
+      <a href="../index.html">← Back to Home</a>
+    </header>
+
+    <section class="blog-list">
+      <article class="card">
+        <h2>My Tech Journey: From Curiosity to Code</h2>
+        <p>A story of how my interest in tech grew from curiosity into a real coding journey.</p>
+        <a href="blog1.html">Read more →</a>
+      </article>
+
+      <article class="card">
+        <h2>My Tech Journey: Embracing New Challenges</h2>
+        <p>How stepping into unfamiliar territory helped me grow as a developer.</p>
+        <a href="blog2.html">Read more →</a>
+      </article>
+
+      <article class="card">
+        <h2>My Tech Journey: Finally Taking DSA Seriously</h2>
+        <p>The moment I decided to face the Data Structures & Algorithms challenge head-on.</p>
+        <a href="blog3.html">Read more →</a>
+      </article>
+
+      <article class="card">
+        <h2>My Tech Journey: Learning Git & GitHub Without Losing My Mind</h2>
+        <p>From confusion to confidence — my experience mastering Git and GitHub.</p>
+        <a href="blog4.html">Read more →</a>
+      </article>
+    </section>
+  </main>
+
+
+  <style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .navbar li {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+  }
+
+  .navbar a.active,
+  .navbar a:hover {
+    background: #e3e7fa;
+    color: #2a4d9b;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2em;
+    margin-left: 0.5em;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.2rem 2rem 1.2rem;
+  }
+
+  .blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+  }
+
+  .blog-header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 700;
+    color: #2a4d9b;
+  }
+
+  .blog-header a {
+    color: #2a4d9b;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: text-decoration 0.2s;
+  }
+
+  .blog-header a:hover {
+    text-decoration: underline;
+  }
+
+  .blog-list {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(42,77,155,0.07);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-left: 5px solid #2a4d9b;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(42,77,155,0.13);
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-size: 1.35rem;
+    color: #2a4d9b;
+    font-weight: 600;
+  }
+
+  .card p {
+    margin: 0 0 1.2rem 0;
+    color: #444;
+    font-size: 1.05rem;
+  }
+
+  .card a {
+    color: #fff;
+    background: #2a4d9b;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(42,77,155,0.08);
+    display: inline-block;
+  }
+
+  .card a:hover {
+    background: #18336b;
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.7rem 1rem;
+    }
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.7rem;
+      width: 100%;
+      margin-top: 0.7rem;
+    }
+    .blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    main {
+      padding: 0 0.5rem 2rem 0.5rem;
+    }
+    .card {
+      padding: 1.2rem 0.8rem 1rem 0.8rem;
+    }
+  }
+  </style>
+</body>
+</html>
