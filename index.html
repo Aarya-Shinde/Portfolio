@@ -39,9 +39,9 @@
     <nav>
       <div class="logo">Aarya Shinde</div>
       <ul>
-        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="blog/blog.html">Blog</a></li>
         <li><a href="art/index.html">Art</a></li>
-        <li><a href="writing/index.html">Writing</a></li>
+        <li><a href="writing/writing.html">Writing</a></li>
         <li>
           <button id="modeToggle" class="btn" aria-label="Toggle theme">
             <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#333" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@
       
 <h2>Projects</h2>
   <section class="project-timeline">
-      <div class="project-line"></div> 
+      <!-- <div class="project-line"></div>  -->
       <div class="project-cards">
         
         <div class="project-card">
@@ -174,18 +174,26 @@
       <p>I merge code, creativity, and storytelling. With projects in web dev, AI writing tools, and art platforms—my portfolio reflects fusion thinking.</p>
     </section>
 
-    <section class="section">
-      <h2> Blog</h2>
-      <select id="postSelector" class="btn">
-        <option value="posts/blog-1.md">Building a Smart Hospital System</option>
-        <option value="posts/blog-2.md">How I Blend Writing and Web Dev</option>
-        <option value="posts/blog-3.md">Top Tools for Solo Creators in 2025</option>
-      </select>
-      <article id="blogContent"></article>
-    </section>
+<section class="section blog-section">
+  <h2>Blog</h2>
+  <div id="blogContent" class="blog-content">
+    <a href="blog/blog1.html" class="blog-card">
+      <h3>How I Built a Real-Time Chat App with Python & React</h3>
+      <p>Discover the architecture and tools behind my scalable chat platform.</p>
+    </a>
+    <a href="blog/blog2.html" class="blog-card">
+      <h3>Designing for Developers: UI/UX Tips That Work</h3>
+      <p>My favorite practical tips for making developer-focused interfaces shine.</p>
+    </a>
+    <a href="blog/blog3.html" class="blog-card">
+      <h3>From Idea to Launch: My E-Commerce Journey</h3>
+      <p>Lessons learned building and deploying a Laravel-based online store.</p>
+    </a>
+  </div>
+</section>
 
     <section class="section">
-      <h2> Tech Stack</h2>
+      <h2>Tech Stack</h2>
       <div class="grid">
         <span>HTML5</span>
         <span>CSS / Tailwind</span>
@@ -199,7 +207,7 @@
     </section>
 
     <section class="section">
-      <h2>📄 Resume & Links</h2>
+      <h2>Resume & Links</h2>
       <ul>
         <li><a href="resume.pdf" target="_blank">Download Resume</a></li>
         <li><a href="https://github.com/dev">GitHub</a></li>
@@ -209,7 +217,7 @@
     </section>
 
     <section class="section">
-      <h2>📬 Contact Me</h2>
+      <h2>Contact Me</h2>
       <form action="https://formspree.io/f/yourformid" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="_replyto" placeholder="Your Email" required />
