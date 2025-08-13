@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Tech Journey - Blog #1</title>
+    <link rel="stylesheet" href="blog.css">
+     <script src="../assets/scripts/toggleMode.js"></script>
+      
+</head>
+<body>
+ 
+<nav class="navbar">
+  <div class="logo">Aarya Shinde</div>
+  
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  
+  <ul>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="art/index.html">Art</a></li>
+    <li><a href="writing/index.html">Writing</a></li>
+    <li>
+        <button id="modeToggle" class="toggle-btn" aria-label="Toggle theme">
+        <!-- Sun Icon -->
+        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+
+        <!-- Moon Icon -->
+        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none">
+            <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+        </svg>
+        </button>
+
+    </li>
+  </ul>
+</nav>
+
+</header>
+
+<header>
+    <h1>My Tech Journey: Finally Taking DSA Seriously</h1>
+    <p>Posted on June 17, 2025 by Aarya Shinde</p>
+</header>
+<hr>
+<article>
+    <h2>Introduction</h2>
+    <p>
+        You know that one thing every experienced developer keeps telling you to learn, and you keep nodding like 
+        “Yeah, yeah, I’ll get to it” — but never actually do? For me, that was Data Structures and Algorithms (DSA). 
+        I had danced around it for years, but this time, I decided to stop procrastinating and really commit. 
+        Spoiler: It’s not as scary as I thought… but it’s also not as easy as I hoped.
+    </p>
+
+    <h2>The Decision</h2>
+    <p>
+        My wake-up call came during a coding interview prep session. I realized I could build projects and solve real-world problems, 
+        but when asked to implement a “binary search” from scratch, I suddenly became an ancient Greek philosopher — 
+        answering questions with more questions. That’s when I knew: time to face the DSA beast head-on.
+    </p>
+
+    <h2>The First Few Weeks</h2>
+    <p>
+        I started with arrays and linked lists, thinking, “How hard can this be?” Turns out, harder than I expected. 
+        I had to rewire my brain to think in terms of memory, complexity, and efficiency — not just “will it work?”.
+    </p>
+    <p>
+        My early practice sessions were a mix of small wins (finally understanding how a stack works) 
+        and humbling defeats (trying to implement quicksort without crying). 
+        The important thing? I kept showing up, problem after problem.
+    </p>
+
+    <h2>Breakthrough Moments</h2>
+    <p>
+        One magical moment was solving my first graph traversal problem. 
+        I still remember the “aha!” feeling when my BFS code finally returned the correct output — 
+        and didn’t take a million years to run.
+    </p>
+    <p>
+        The more I practiced, the more patterns I started to see. 
+        Problems that once felt like puzzles from another dimension started to look… familiar.
+    </p>
+
+    <h2>Lessons from DSA</h2>
+    <ul>
+        <li><strong>Consistency beats intensity:</strong> Solving 2–3 problems every day adds up fast.</li>
+        <li><strong>Understand, don’t memorize:</strong> If you can explain a concept without looking at code, you’ve truly learned it.</li>
+        <li><strong>Track your progress:</strong> Watching your “solved” count go up is surprisingly motivating.</li>
+        <li><strong>Take breaks:</strong> Brute-forcing your brain rarely works; sometimes the solution hits you in the shower.</li>
+    </ul>
+
+    <h2>What’s Next?</h2>
+    <p>
+        My plan is to tackle more advanced topics — dynamic programming, heaps, and maybe even segment trees 
+        (which currently sound like something from a fantasy novel). 
+        I also want to mix DSA with real-world projects so it doesn’t feel like I’m solving problems in a vacuum.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        Taking DSA seriously has been humbling, frustrating, and incredibly rewarding. 
+        If you’ve been avoiding it like I did, here’s your sign to just start. 
+        The first few steps will feel slow, but one day you’ll look back and realize you’re solving problems 
+        you once thought were impossible. And that’s a pretty great feeling.
+    </p>
+</article>
+<hr>
+
+
+
+    <section class="comments-section">
+        <h3>Comments</h3>
+        <p>No comments yet. Be the first to share your thoughts!</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+    <footer>
+       <p>&copy; 2025 Aarya Shinde. All rights reserved.</p>
+    </footer>
+</body>
+</html>
