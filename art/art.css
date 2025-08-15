@@ -1,0 +1,65 @@
+/* General body and font styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+/* Gallery container and grid setup */
+.gallery-container {
+    display: grid;
+    /* Use 'masonry' layout with grid for a Pinterest-like effect */
+    /* This creates columns and allows items to span multiple rows */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    /* Using 'align-content' to control space between rows, useful for masonry layouts */
+    align-content: start;
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    padding: 15px;
+    font-size: 1em;
+    color: #555;
+    font-weight: 700;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
