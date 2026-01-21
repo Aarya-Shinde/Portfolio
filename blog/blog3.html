@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Tech Journey - Blog #1</title>
+    <link rel="stylesheet" href="blog.css">
+     <script src="../assets/scripts/toggleMode.js"></script>
+      
+</head>
+<body>
+ 
+<nav class="navbar">
+  <div class="logo">Aarya Shinde</div>
+  
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  
+  <ul>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="art/index.html">Art</a></li>
+    <li><a href="writing/index.html">Writing</a></li>
+    <li>
+        <button id="modeToggle" class="toggle-btn" aria-label="Toggle theme">
+        <!-- Sun Icon -->
+        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+
+        <!-- Moon Icon -->
+        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none">
+            <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+        </svg>
+        </button>
+
+    </li>
+  </ul>
+</nav>
+
+</header>
+
+<header>
+    <h1>My Tech Journey: Learning Git & GitHub Without Losing My Mind</h1>
+    <p>Posted on July 1, 2025 by Aarya Shinde</p>
+</header>
+<hr>
+<article>
+    <h2>Introduction</h2>
+    <p>
+        If I had a rupee for every time someone told me “Use Git!”, I could probably fund my own startup by now. 
+        But I’ll admit it — for a long time, I avoided it. Git felt like one of those mysterious developer tools 
+        you *pretend* to know about until someone asks you to explain <code>git rebase</code>. 
+        Eventually, I decided enough was enough — time to actually learn it.
+    </p>
+
+    <h2>Why Git & GitHub?</h2>
+    <p>
+        In simple terms, Git is a version control system — a fancy way of saying 
+        “it remembers all your code changes so you can go back in time when you mess up.”  
+        GitHub is like Git’s social media — a place to store, share, and collaborate on code with others.
+    </p>
+    <p>
+        Before Git, I had folders named <em>project_final</em>, <em>project_final_v2</em>, and 
+        <em>project_final_FINAL_REALLY_THIS_ONE</em>. Now, Git keeps my history clean and my sanity intact.
+    </p>
+
+    <h2>First Steps</h2>
+    <p>
+        I started small — just creating a local repository and making a few commits. 
+        The first commands I learned became my everyday toolkit:
+    </p>
+<pre>
+# Initialize a Git repo
+git init
+
+# Check file status
+git status
+
+# Add changes
+git add filename.txt
+
+# Commit changes with a message
+git commit -m "Initial commit"
+</pre>
+    <p>
+        Seeing those commits pile up felt strangely satisfying. 
+        Like I was giving my code a personal diary.
+    </p>
+
+    <h2>Pushing to GitHub</h2>
+    <p>
+        Once I got the basics, I linked my local repo to a GitHub repository. That’s when I started feeling like 
+        a “real developer.” Here’s what the magic looked like:
+    </p>
+<pre>
+# Connect local repo to GitHub
+git remote add origin https://github.com/username/repo-name.git
+
+# Push code to GitHub
+git push -u origin main
+</pre>
+    <p>
+        Suddenly, my code was on the internet — versioned, safe, and ready to share.
+    </p>
+
+    <h2>Branching & Merging</h2>
+    <p>
+        Branches quickly became my favorite feature. 
+        They let me experiment with new features without breaking my main code.  
+        And if things went horribly wrong… I could just delete the branch and pretend it never happened.
+    </p>
+<pre>
+# Create and switch to a new branch
+git checkout -b feature-branch
+
+# Merge branch into main
+git checkout main
+git merge feature-branch
+</pre>
+
+    <h2>Common Mistakes & Lessons</h2>
+    <ul>
+        <li><strong>Commit often:</strong> Small commits are easier to debug than one giant commit called “fixed stuff”.</li>
+        <li><strong>Read error messages:</strong> Git’s errors are like riddles — cryptic but solvable.</li>
+        <li><strong>Don’t fear the terminal:</strong> The CLI is your friend, not your enemy.</li>
+        <li><strong>Pull before you push:</strong> Avoid conflicts by syncing with the remote repo first.</li>
+    </ul>
+
+    <h2>Resources I Used</h2>
+    <ul>
+        <li><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a> — Free and super detailed.</li>
+        <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching</a> — Interactive and visual.</li>
+        <li><a href="https://docs.github.com/en" target="_blank">GitHub Docs</a> — Everything you need straight from the source.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        Learning Git & GitHub felt intimidating at first, but once I started, I realized it’s less about memorizing 
+        commands and more about understanding the workflow. Now, I can’t imagine coding without it.  
+        My advice? Just start small, mess around, and don’t be afraid to break things — 
+        Git will always have your back.
+    </p>
+</article>
+<hr>
+
+
+
+
+    <section class="comments-section">
+        <h3>Comments</h3>
+        <p>No comments yet. Be the first to share your thoughts!</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Aarya Shinde. All rights reserved.</p>
+    </footer>
+</body>
+</html>
