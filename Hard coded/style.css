@@ -152,6 +152,91 @@ ul {
   padding-left: 1.5rem;
 }
 
+/* *********Hero Section Styling with animation*********** */
+
+/* Hero Layout */
+.hero-section {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Pushes content to the right */
+  overflow: hidden;
+  margin-top: -80px; /* Counteracts header height */
+  padding-right: 8%;  /* Space from the right edge */
+  background: transparent;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  perspective: 1200px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: right; /* Aligns text to the right */
+  max-width: 600px;
+}
+
+/* Lottie Alignment */
+.lottie-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Falling Card Style */
+/* Updated Falling Card Style */
+.floating-card {
+  position: absolute;
+  width: 90px;
+  height: 120px;
+  background: #ffffff; /* Card White */
+  backdrop-filter: blur(2px);
+  border: 1px solid #d1d1d1; /* Light playing card border */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800; /* Bold card-style font */
+  font-size: 0.85rem;
+  pointer-events: none;
+  animation: fallAndRotate linear infinite;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes fallAndRotate {
+  0% { 
+    transform: translateY(-20vh) rotateX(0deg) rotateY(0deg); 
+    opacity: 0; 
+  }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { 
+    transform: translateY(110vh) rotateX(360deg) rotateY(180deg); 
+    opacity: 0; 
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .lottie-container {
+    justify-content: center;
+  }
+}
+
 
 /* *****************Project section styling ******************* */
 
@@ -302,168 +387,108 @@ ul {
 
 
 /* Timeline for Work Experience */
-.timeline-container {
-  position: relative;
-  margin: 60px auto;
-  width: 90%;
-  padding-left: 20px;
-  padding-right: 20px;
+
+/* Puzzle Grid Container */
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: min-content;
+  grid-auto-flow: dense; 
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.timeline-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background-color: #d4af37;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
+/* Individual Puzzle Pieces */
 .timeline-entry {
-  position: relative;
-  margin: 40px 0;
-  width: 45%;
-  padding: 16px 20px 26px;
   background: #fffef7;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  z-index: 1;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   cursor: pointer;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Initial state for animation */
+  opacity: 0;
+  will-change: transform, opacity;
 }
+
+/* Puzzle Sizing Variety */
+.timeline-entry:nth-child(3n) { grid-column: span 2; } /* Every 3rd is wide */
+.timeline-entry:nth-child(4n) { grid-row: span 1; } 
 
 .timeline-entry:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+  border-color: #d4af37;
 }
 
-.timeline-entry::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #d4af37;
-  border: 4px solid white;
-  z-index: 2;
-}
-
-.timeline-entry.left {
-  left: 0;
-}
-
-.timeline-entry.left::before {
-  right: -10px;
-}
-
-.timeline-entry.right {
-  left: 55%;
-}
-
-.timeline-entry.right::before {
-  left: -10px;
-}
-
+/* Typography & Elements */
 .timeline-entry .date {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  color: #666;
-  margin-bottom: 6px;
-  display: block;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .timeline-entry h4 {
-  font-size: 1.15rem;
-  margin: 0 0 5px;
+  margin: 10px 0 5px;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.timeline-entry .org {
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.timeline-bar {
+  height: 6px;
+  background: #d4af37;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: width 0.8s ease-in-out;
 }
 
 .timeline-entry p {
   font-size: 0.95rem;
-  color: #444;
-  margin-top: 10px;
-  display: none;
+  color: #555;
+  line-height: 1.5;
+  display: none; /* Hidden until clicked */
 }
 
 .timeline-entry.active p {
   display: block;
+  animation: fadeIn 0.3s ease;
 }
 
-.timeline-entry.active::after {
-  content: '▼';
-  font-size: 0.8rem;
-  color: #888;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
 
-.timeline-entry:not(.active)::after {
-  content: '▶';
-  font-size: 0.8rem;
-  color: #888;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.timeline-bar {
-  height: 8px;
-  background: #d4af37;
-  border-radius: 6px;
-  margin-top: 8px;
-}
-
-.timeline-entry {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-}
-
-.timeline-entry[data-direction="left"] {
-  transform: translateX(-80px);
-}
-
-.timeline-entry[data-direction="right"] {
-  transform: translateX(80px);
-}
-
-.timeline-entry.visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-
-.timeline-entry {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  will-change: transform, opacity;
-  position: relative;
-}
+/* Entry Animations */
+.timeline-entry[data-anim="left"] { transform: translateX(-60px); }
+.timeline-entry[data-anim="right"] { transform: translateX(60px); }
+.timeline-entry[data-anim="top"] { transform: translateY(-60px); }
+.timeline-entry[data-anim="bottom"] { transform: translateY(60px); }
 
 .timeline-entry.animate {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0) !important;
 }
 
-.timeline-entry[data-anim="left"] {
-  transform: translateX(-60px);
-}
-.timeline-entry[data-anim="right"] {
-  transform: translateX(60px);
-}
-.timeline-entry[data-anim="top"] {
-  transform: translateY(-60px);
-}
-.timeline-entry[data-anim="bottom"] {
-  transform: translateY(60px);
-}
-.timeline-entry.animate {
-  transform: translateX(0) translateY(0);
-  opacity: 1;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .timeline-entry:nth-child(3n) { grid-column: span 1; }
+  .puzzle-grid { grid-template-columns: 1fr; }
+}
 
 
 
