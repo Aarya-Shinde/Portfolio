@@ -19,29 +19,15 @@
 </head>
 
 <body>
-
-  <audio id="hover-sound" src="sounds/card-flip.mp3" preload="auto"></audio>
-
-  <script>
-    const cards = document.querySelectorAll('.project-card');
-    const sound = document.getElementById('hover-sound');
-  
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        sound.currentTime = 0;
-        sound.play();
-      });
-    });
-  </script>
   
 
   <header>
     <nav>
       <div class="logo">Aarya Shinde</div>
       <ul>
-        <li><a href="blog/index.html">Blog</a></li>
-        <li><a href="art/index.html">Art</a></li>
-        <li><a href="writing/index.html">Writing</a></li>
+        <li><a href="blog/blog.html">Blog</a></li>
+        <li><a href="art/art.html">Art</a></li>
+        <li><a href="writing/writing.html">Writing</a></li>
         <li>
           <button id="modeToggle" class="btn" aria-label="Toggle theme">
             <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#333" viewBox="0 0 24 24">
