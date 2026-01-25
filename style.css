@@ -241,148 +241,77 @@ ul {
 /* *****************Project section styling ******************* */
 
 
-/* Hide scrollbar across browsers */
-
-.project-timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-top: 3rem;
-  overflow: hidden;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+.stack-visual-wrapper {
+    perspective: 1500px;
+    padding: 100px 50px;
 }
 
-.project-line {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: calc(50% + 10px);
-  height: 5px;
-  width: 100vw;
-  background: linear-gradient(to right, transparent, crimson, transparent);
-  opacity: 0.5;
-  z-index: 0;
-  animation: pulseLine 3s ease-in-out infinite;
-  pointer-events: none;
+.stack-bucket {
+    width: 300px;
+    border: 4px solid #333;
+    border-top: none;
+    padding: 15px;
+    background: rgba(0,0,0,0.03);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
 }
 
-@keyframes pulseLine {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+.brick {
+    position: relative;
+    height: 70px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 10;
 }
 
-.project-cards {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-  scroll-behavior: auto;
-  max-width: 100%;
-  padding: 2rem 0;
-  position: relative;
-  z-index: 1;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+.brick-face {
+    background: #1a1a1a;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-left: 6px solid crimson;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
-.project-cards::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+.brick-details {
+    position: absolute;
+    left: 120%;
+    top: 0;
+    width: 350px;
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(-20deg);
+    transition: all 0.5s ease;
 }
 
-.project-card {
-  flex: 0 0 calc(100% / 5 - 2rem);
-  min-width: 180px;
-  max-width: 200px;
-  padding: 1.5rem;
-  background: #f3f3f3;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.6s ease;
-  position: relative;
-  z-index: 2;
+/* The Active State for Popped Bricks */
+.brick.popped-out {
+    transform: translateY(-350px) rotateX(45deg) scale(0.8); /* Increased from -250px */
+    opacity: 0.3;
+    filter: blur(2px);
+    z-index: 1;
 }
 
-.icon-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* The Focused Brick (The one you hovered) */
+.brick.focused {
+    transform: translateX(100px) rotateY(-10deg);
+    z-index: 100;
 }
 
-.project-card .icon {
-  font-size: 2.5rem;
-  color: gray;
-  animation: pulseIcon 2s ease-in-out infinite;
-  transition: all 0.4s ease;
+.brick.focused .brick-details {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateY(0deg);
 }
-
-@keyframes pulseIcon {
-  0%, 100% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.2); opacity: 1; }
-}
-
-.project-card .title {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  color: #333;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.project-card:hover {
-  background: #1a1a1a;
-  transform: scale(1.08);
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
-}
-
-.project-card:hover .icon {
-  color: red;
-  transform: scale(1.3);
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
-}
-
-.project-card:hover .title {
-  color: red;
-}
-
-.tooltip {
-  display: block;
-  margin-top: 1rem;
-  background: #fff;
-  color: #111;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  text-align: left;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.8s ease, max-height 1.2s ease;
-}
-
-.project-card:hover .tooltip {
-  opacity: 1;
-  max-height: 200px;
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    flex: 0 0 calc(100% / 2.5);
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card {
-    flex: 0 0 80%;
-  }
-}
-
 
 
 

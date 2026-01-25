@@ -1,3 +1,5 @@
+// js for hero falling card background 
+
 document.addEventListener("DOMContentLoaded", () => {
   const cardContainer = document.getElementById('heroCards');
   const skills = ['Python', 'SQL', 'PHP', 'JS', 'Java', 'Git', 'Flask', 'API', 'PowerBI', 'CSS'];
@@ -27,3 +29,37 @@ document.addEventListener("DOMContentLoaded", () => {
     createCard(i);
   }
 });
+
+
+// Stack animation of projects
+
+// script identifies which bricks are "above" your target and 
+// animates them flying out of the top of the bucket
+
+
+
+document.querySelectorAll('.brick').forEach((brick) => {
+    brick.addEventListener('mouseenter', function() {
+        const allBricks = Array.from(document.querySelectorAll('.brick'));
+        const currentIndex = allBricks.indexOf(this);
+
+        this.classList.add('focused');
+
+        // LIFO Logic: Everything ABOVE (lower index in our TOP-down array) pops out
+        allBricks.forEach((b, i) => {
+            if (i < currentIndex) {
+                // Stagger the pop-out animation for smoothness
+                setTimeout(() => {
+                    b.classList.add('popped-out');
+                }, i * 100);
+            }
+        });
+    });
+
+    brick.addEventListener('mouseleave', function() {
+        document.querySelectorAll('.brick').forEach(b => {
+            b.classList.remove('popped-out', 'focused');
+        });
+    });
+});
+
