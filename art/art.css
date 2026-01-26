@@ -1,65 +1,152 @@
-/* General body and font styling */
+:root {
+    --bg-color: #ffffff;
+    --text-main: #1a1a1a;
+    --accent: #ff4d4d; /* High energy accent color */
+    --gray-light: #f4f4f4;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-/* Header styling */
-.header {
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-weight: 300;
+    color: #888;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-contact {
+    background: var(--text-main);
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 4rem 5% 6rem;
 }
 
-.header h1 {
-    color: #333;
-    font-size: 2.5em;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-/* Gallery container and grid setup */
+/* Gallery - Masonry Layout */
 .gallery-container {
-    display: grid;
-    /* Use 'masonry' layout with grid for a Pinterest-like effect */
-    /* This creates columns and allows items to span multiple rows */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    /* Using 'align-content' to control space between rows, useful for masonry layouts */
-    align-content: start;
+    columns: 3 300px; /* Actual Masonry Effect */
+    column-gap: 20px;
+    padding: 0 5% 5rem;
 }
 
-/* Card styling */
 .card {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: var(--gray-light);
 }
 
 .card img {
     width: 100%;
-    height: auto;
     display: block;
+    transition: transform 0.5s ease;
 }
 
-.card-title {
-    padding: 15px;
-    font-size: 1em;
-    color: #555;
-    font-weight: 700;
+/* Hover Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.7);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .gallery-container {
-        grid-template-columns: 1fr; /* Single column on small screens */
-    }
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.text {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/* About Section */
+.about-section {
+    background: var(--gray-light);
+    padding: 5rem 20%;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 5%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.socials {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .about-section { padding: 3rem 10%; }
 }
