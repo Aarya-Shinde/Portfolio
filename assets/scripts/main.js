@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.innerText = skills[index % skills.length];
     
     // Set text color to Black or Red like a deck of cards
-    card.style.color = Math.random() > 0.5 ? '#000000' : '#d40000';
+    card.style.color = Math.random() > 0.5 ? '#000000' : '#d4af37';
     
     card.style.left = `${Math.random() * 100}%`;
     const duration = 8 + Math.random() * 10;
@@ -45,13 +45,12 @@ document.querySelectorAll('.brick').forEach((brick) => {
 
         this.classList.add('focused');
 
-        // LIFO Logic: Everything ABOVE (lower index in our TOP-down array) pops out
+        // LIFO Logic: Everything ABOVE pops out
         allBricks.forEach((b, i) => {
             if (i < currentIndex) {
-                // Stagger the pop-out animation for smoothness
                 setTimeout(() => {
                     b.classList.add('popped-out');
-                }, i * 100);
+                }, i * 50); // Faster stagger for cleaner feel
             }
         });
     });
@@ -62,6 +61,7 @@ document.querySelectorAll('.brick').forEach((brick) => {
         });
     });
 });
+
 
 
 // logic for puzzle solving and scrambling of ***about me**** background
@@ -163,3 +163,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//  Logic for ***Conctact me form*****
+
+//  to change the system staus as a someone is interacting with the form
+
+document.addEventListener('DOMContentLoaded', () => {
+    const statusText = document.querySelector('.status');
+    const inputs = document.querySelectorAll('form input, form textarea');
+
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            statusText.textContent = `SYSTEM_ACTIVE: Inputting ${input.name.toUpperCase()}...`;
+            statusText.style.color = "#d4af37";
+        });
+
+        input.addEventListener('blur', () => {
+            if (input.value === "") {
+                statusText.textContent = "SYSTEM_IDLE: Awaiting Input";
+            } else {
+                statusText.textContent = "SYSTEM_READY: Data Cached";
+            }
+        });
+    });
+});
