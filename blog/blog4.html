@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Tech Journey - Blog #4</title>
+    <link rel="stylesheet" href="blog.css">
+     <script src="../assets/scripts/toggleMode.js"></script>
+      
+</head>
+<body>
+ 
+<nav class="navbar">
+  <div class="logo">Aarya Shinde</div>
+  
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  
+  <ul>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="art/index.html">Art</a></li>
+    <li><a href="writing/index.html">Writing</a></li>
+    <li>
+        <button id="modeToggle" class="toggle-btn" aria-label="Toggle theme">
+        <!-- Sun Icon -->
+        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+
+        <!-- Moon Icon -->
+        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:none">
+            <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+        </svg>
+        </button>
+
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+<article>
+   <header>
+    <h1>Building Unified System For Author and Audience: How a Simple Idea turned into Full Reading & Writing Platform</h1>
+    <p>Posted on February 14, 2026 by Maya</p>
+</header>
+<hr>
+
+
+<h2>Introduction</h2>
+<p>
+    Every project starts with a small thought. Mine was simple: I wanted a place where readers could keep track of what they read, 
+    reflect on it, and maybe even write something of their own. At first, I imagined a basic book tracker. 
+    But as I worked on it, the idea kept growing. Eventually, it became USA3 — a full platform combining a personal library, 
+    reader diary, and writing workspace.
+</p>
+
+<h2>The Idea Behind the Project</h2>
+<p>
+    I didn’t want to build just another website with lists and forms. I wanted something that felt personal, 
+    like a digital reading room. A place where users could collect books, think about them, and create their own stories. 
+    That vision shaped every decision I made, from the features I built to the colors I chose.
+</p>
+
+<h2>Choosing the Tech Stack</h2>
+<p>
+    I built the platform using HTML, CSS, JavaScript, PHP, MySQL, and Python with Flask. 
+    I deliberately avoided heavy frameworks because I wanted to understand each layer of the system myself. 
+    Using a traditional stack helped me see clearly how frontend, backend, and database components connect, 
+    and it gave me full control over the architecture.
+</p>
+
+<h2>Starting with Authentication</h2>
+<p>
+    The first feature I implemented was user authentication. Since the platform revolves around personal libraries 
+    and writing drafts, it was important that every user’s data stayed separate. I built a login and registration system 
+    using PHP sessions and database storage, which became the foundation for everything else in the project.
+</p>
+
+<h2>Building the Library System</h2>
+<p>
+    Once users could log in, I focused on the library feature. I wanted adding books to be effortless, 
+    so I created a scraping pipeline using Python Flask. Instead of typing book details manually, 
+    users can paste a link, and the system fetches the information automatically.
+</p>
+<p>
+    The database design separates Users, Novels, and Library entries. This ensures that multiple users can save the same book 
+    without duplicating records. Structuring the database this way helped me practice normalization and relational design.
+</p>
+
+<h2>Designing the Experience</h2>
+<p>
+    I didn’t want the interface to feel like a typical modern dashboard. I wanted something warmer and more literary. 
+    That’s when I introduced the antique-inspired theme. I used parchment tones, leather-like browns, and subtle gold accents 
+    to give the platform a reading-room atmosphere. Both light and dark modes follow this aesthetic so the experience stays consistent.
+</p>
+
+<h2>The Reader’s Diary</h2>
+<p>
+    One of my favorite features is the Reader’s Diary. I wanted users to interact with books beyond just saving them. 
+    The diary allows users to write reviews, store quotes, and personalize pages with layout elements. 
+    JavaScript handles the interactive parts, CSS controls the styling and transitions, and PHP stores entries in the database.
+</p>
+<p>
+    Each diary entry is tied to a user and page number, allowing a multi-page journal experience. 
+    Building this feature helped me understand how UI behavior, database storage, and user interaction come together.
+</p>
+
+<h2>Creating the Writer Dashboard</h2>
+<p>
+    Since the platform encourages creativity, I also built a writer dashboard. This allows users to create stories, 
+    manage chapters, and save drafts. The editor uses JavaScript for formatting tools and PHP for storing content. 
+    I designed it to stay simple and structured so writers can focus on their ideas rather than the interface.
+</p>
+
+<h2>Thinking Like a Software Engineer</h2>
+<p>
+    While building USA3, I tried to approach it like a full software lifecycle project. 
+    I planned modules, structured the database carefully, and handled cases like invalid inputs or duplicate entries. 
+    Each component has a defined role: frontend for interaction, PHP for application logic, MySQL for storage, 
+    and Python for data processing. Keeping these responsibilities separate made the system easier to expand and maintain.
+</p>
+
+<h2>What I Learned</h2>
+<ul>
+    <li>Design matters as much as functionality.</li>
+    <li>Good database structure saves headaches later.</li>
+    <li>Breaking features into modules makes development manageable.</li>
+    <li>Real projects evolve — the final system is rarely the original idea.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+    By the time I finished, USA3 had become more than a college project. 
+    It turned into a platform that reflects how readers and writers interact with stories today. 
+    It shows my ability to design a multi-module web application, integrate different technologies, 
+    and think about both user experience and system architecture at the same time.
+</p>
+<p>
+    Most importantly, this project taught me that building software isn’t just about coding features. 
+    It’s about shaping an idea into something real, useful, and meaningful.
+</p>
+```
+
+</article>
+<hr>
+
+
+</main>
+
+
+    <section class="comments-section">
+        <h3>Comments</h3>
+        <p>No comments yet. Be the first to share your thoughts!</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Aarya Shinde. All rights reserved.</p>
+    </footer>
+</body>
+</html>
